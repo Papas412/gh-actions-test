@@ -1,3 +1,3 @@
 # GH Actions test repo
 
-## testing the workflow
+## testing the workflow in a new branch
