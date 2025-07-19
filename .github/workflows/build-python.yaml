@@ -4,6 +4,7 @@ on:
 env:
   RECOMMENDATION_PORT: 1010
   OTEL_SERVICE_NAME: recommendation
+  PRODUCT_CATALOG_ADDR: product-catalog:8080
 
 jobs:
   build:
