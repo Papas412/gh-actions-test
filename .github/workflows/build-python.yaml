@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
 env:
   RECOMMENDATION_PORT: 1010
+  OTEL_SERVICE_NAME: recommendation
 
 jobs:
   build:
