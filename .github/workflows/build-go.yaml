@@ -27,7 +27,9 @@ jobs:
             go mod download
 
       - name: Build
-        run: go build -o product-catalog src/product-catalog/main.go
+        run: | 
+            cd src/product-catalog
+            go build -o product-catalog main.go
 
   test:
     needs: build
