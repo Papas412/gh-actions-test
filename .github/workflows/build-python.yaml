@@ -1,6 +1,8 @@
 name: Build Python Service
 on:
   workflow_dispatch:
+env:
+  RECOMMENDATION_PORT: 1010
 
 jobs:
   build:
@@ -22,5 +24,6 @@ jobs:
 
       - name: Build
         run: |
+            opentelemetry-bootstrap -a install
             cd src/recommendation
             python recommendation_server.py
