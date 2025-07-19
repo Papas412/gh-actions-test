@@ -17,7 +17,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.20'
+          go-version: '1.22'
 
       - name: Install dependencies
         run: |
@@ -28,6 +28,7 @@ jobs:
         run: go build -o product-catalog src/product-catalog/main.go
 
   test:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +37,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.20'
+          go-version: '1.22'
 
       - name: Run tests
         run: |
