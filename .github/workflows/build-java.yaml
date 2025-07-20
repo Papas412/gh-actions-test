@@ -18,6 +18,7 @@ jobs:
       - name: Build
         run: |
           cd src/ad
+          chmod +x ./gradlew
           ./gradlew
           ./gradlew downloadRepos
           ./gradlew installDist -PprotoSourceDir=./proto
