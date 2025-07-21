@@ -5,7 +5,7 @@ WORKDIR /cmatrix
 RUN apk update --no-cache \ 
     && apk add --no-cache git autoconf automake alpine-sdk ncurses-dev ncurses-static \
     && git clone https://github.com/abishekvashok/cmatrix.git \
-    #&& cd cmatrix \
+    && cd cmatrix \
     && autoreconf -i \ 
     && mkdir -p /usr/lib/kbd/consolefonts /usr/share/consolefonts \
     && ./configure LDFLAGS="-static" \

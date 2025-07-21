@@ -23,6 +23,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: cmatrix
-          file: Dockerfile
+          file: cmatrix/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/cmatrix:${{ github.run_id }}
